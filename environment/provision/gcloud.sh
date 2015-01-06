@@ -32,8 +32,10 @@ echo '  * Installing Cloud SDK'
 ./google-cloud-sdk/install.sh --rc-path=/home/vagrant/.profile --bash-completion=true --path-update=true --disable-installation-options
 
 # Install GAE language packages
+echo '  * Installing Cloud SDK python deps'
 ./google-cloud-sdk/bin/gcloud components update pkg-go pkg-python
 # Install GAE new preview feature (dev_appserver 2)
+echo '  * Installing Cloud SDK app features'
 ./google-cloud-sdk/bin/gcloud components update app -q
 
 sudo chown vagrant:vagrant -R google-cloud-sdk/

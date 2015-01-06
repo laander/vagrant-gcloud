@@ -47,7 +47,7 @@ You should now be able to see the running webserver by opening chrome to `http:/
 
 Note that you can also start multiple of the modules at the same time by running e.g. `app-server module1 module2 module3`. Then each app module will run on its own port, starting from :8080 up to :8089.
 
-7) When you're ready to **deploy your changes**, you can do it by running (replace "default" with any module)
+7) When you're ready to **deploy your changes**, you can do it by running (replace "app" with any module)
 
 	app-deploy app
 
