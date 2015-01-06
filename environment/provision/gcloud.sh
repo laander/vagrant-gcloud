@@ -8,7 +8,7 @@ sudo apt-get install -y python-dev
 sudo apt-get install -y python-setuptools python-pip
 sudo apt-get install -y python-software-properties python g++ make
 sudo apt-get build-dep -y python-imaging
-sudo apt-get install libjpeg8 libjpeg62-dev libfreetype6 libfreetype6-dev
+sudo apt-get install -y libjpeg8 libjpeg62-dev libfreetype6 libfreetype6-dev
 sudo pip install jinja2
 sudo pip install Pillow
 
