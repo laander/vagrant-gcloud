@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Check if supplied submodule exists in the project before continuing
+if [ ! -d "/vagrant/$1" ]; then
+	echo "GAE submodule not found /vagrant/$1, exiting" && exit 1
+fi
+
+# Run deploy job
+echo "Deploying GAE app '$1' to ze cloud"
+gcloud preview app deploy /vagrant/$1
+
+echo "Deploy finished!"

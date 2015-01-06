@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Directory for local server GAE data
+DATA_PATH=~/.appengine_data
+
+# Check if supplied submodules exists in the project before continuing
+for app in $*
+do
+	if [ ! -d "/vagrant/$app" ]; then
+		echo "GAE submodule not found /vagrant/$app, exiting" && exit 1
+	fi
+done
+
+# If GAE data dir does not exist, create it
+if [ ! -d "$DATA_PATH" ]; then
+	echo "Setting up GAE data paths for $1"
+	mkdir -p $DATA_PATH
+fi
+
+# Beam up GAE servers
+echo "Starting GAE app(s) '$@'"
+cd /vagrant
+gcloud preview app run $@ --storage-path=$DATA_PATH/storage --blobstore-path=$DATA_PATH/blobstore --datastore-path=$DATA_PATH/datastore --host=0.0.0.0 --admin-host=0.0.0.0
