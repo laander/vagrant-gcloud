@@ -14,7 +14,7 @@ sudo pip install Pillow
 
 # Make the helper binaries executable and globally available
 echo ' ** Setup support CLI commands'
-echo 'export PATH=/vagrant/environment/utils:\$PATH' >> /home/vagrant/.profile
+echo 'export PATH=/vagrant/environment/utils:$PATH' >> /home/vagrant/.profile
 cd /vagrant/environment/utils
 chmod +x app-server
 chmod +x app-deploy
@@ -34,6 +34,7 @@ echo '  * Installing Cloud SDK'
 # Install GAE language packages
 echo '  * Installing Cloud SDK python deps'
 ./google-cloud-sdk/bin/gcloud components update pkg-go pkg-python
+
 # Install GAE new preview feature (dev_appserver 2)
 echo '  * Installing Cloud SDK app features'
 ./google-cloud-sdk/bin/gcloud components update app -q
