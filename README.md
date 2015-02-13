@@ -3,7 +3,7 @@ Vagrant + gcloud (GAE) + python
 
 Google App Engine (and related) provides solid cloud hosting for the masses, but as i was unable to find any vagrant boxes that uses the new gcloud SDK, i made one.
 
-This is a lightweight Vagrant box for setting up the new gcloud SDK with python installed and support for GAE modules, running on Ubuntu 14.04.1 LTS. For provisioning, we use old-school bash scripts as its light and transparent.
+This is a lightweight Vagrant box for setting up the new gcloud SDK with python installed and support for GAE modules, running on Ubuntu 14.04.1 LTS. It comes with [Darth-Vendor](https://github.com/jonparrott/Darth-Vendor), an easy python vendoring helper, for sand-boxed environments like GAE. For provisioning, we use old-school bash scripts as its light and transparent.
 
 **App Engine Modules**  
 The new Google Cloud infrastructure supports App Engine modules that that lets developers factor large applications into logical components that can share stateful services and communicate in a secure fashion. See more: https://cloud.google.com/appengine/docs/python/modules/
